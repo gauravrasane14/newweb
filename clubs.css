@@ -1,0 +1,222 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Color Palette */
+:root {
+    --primary-color: rgb(6, 42, 120); /* Dark Blue */
+    --secondary-color: #f4f4f4; /* Light Gray */
+    --accent-color: #ff6f61; /* Coral */
+    --text-color: #333; /* Dark Gray */
+    --white: #ffffff; /* White */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    width: 62px;
+    height: auto;
+}
+
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    margin-left: auto;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 30px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.nav-links li a:hover {
+    color: var(--primary-color);     
+}
+
+/* Mobile View: Hide the navbar links and show the menu icon */
+.menu-icon {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Below the navbar */
+        right: 0;
+        background-color: var(--white);
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+}
+
+h2 {
+    color: var(--primary-color);
+}
+
+/* Clubs Section */
+.clubs {
+    padding: 50px 0;
+    background-color: var(--secondary-color);
+    text-align: center;
+}
+
+.clubs-container {
+    display: flex;
+    justify-content: center; /* Center items horizontally */
+    align-items: flex-start; /* Align clubs at the start */
+    flex-wrap: nowrap; /* Prevent wrapping */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    padding: 0 20px; /* Add padding for better spacing */
+}
+
+.club-item {
+    width: 180px; /* Set the width to make the boxes smaller */
+    height: 220px; /* Set the height for club boxes */
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    cursor: pointer; /* Show pointer on hover since it's clickable */
+    margin: 0 10px; /* Add margin to create space between items */
+}
+
+.club-item img {
+    width: 100%; /* Ensure the image fits inside the box */
+    height: 150px; /* Adjust the height of the image */
+    object-fit: cover;
+}
+
+.club-item h3 {
+    font-size: 14px; /* Decrease font size for smaller boxes */
+    margin-top: 10px;
+}
+
+.club-item:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Styling for Individual Club Pages */
+.club-details {
+    padding: 50px;
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.club-details .club-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.club-details img {
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.club-details h2 {
+    color: var(--primary-color);
+    font-size: 28px;
+}
+
+.club-details p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.club-details .events {
+    margin-top: 30px;
+}
+
+.club-details .events h3 {
+    font-size: 22px;
+    color: var(--primary-color);
+}
+
+.club-details .events ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.club-details .events ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 50px;
+    text-align: center;
+    justify-content: end;
+    flex: auto;
+    background-image: url(background.webp);
+}
+
+/* Media queries for individual club page */
+@media (max-width: 768px) {
+    .club-details img {
+        max-width: 100%;
+    }
+
+    .clubs-container {
+        flex-direction: column; /* Stack items vertically on mobile */
+        align-items: center; /* Center items */
+        overflow-x: hidden; /* Disable horizontal scrolling */
+    }
+
+    .club-item {
+        min-width: 100%; /* Take full width on mobile */
+        margin-bottom: 20px; /* Add space between items */
+    }
+}
+
+

@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CS ZCOER</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+          <a href="https://zcoer.in/" target="_blank"> <img src="zcoer-gif1.gif" alt="University Logo"></a>
+        </div>
+        <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="gallery.html">Staff Section</a></li>
+            <li><a href="studentcorner.html">Student Section</a></li>
+            <li><a href="clubs.html">Clubs</a></li>
+        </ul>
+        <div class="menu-icon" id="menu-icon">
+            <span>&#9776;</span>
+        </div>
+    </nav>
+
+    
+
+    <!-- Header Section with Slideshow -->
+    <header class="header" id="home">
+        <div class="header-content">
+            <h1>DEPARTMENT OF COMPUTER ENGINEERING</h1> <br><br><br><br>
+            <h2 id="cseds">ZEAL COLLEGE OF ENGINEERING AND RESEARCH, PUNE</h2>
+        </div>
+    </header>
+    <section class="flash-news">
+        <marquee behavior="scroll" direction="left" scrollamount="5">
+          <p>Welcome to Department of Computer Engineering, ZCOER.</p>
+        </marquee>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-container">
+            <img src="lab/classroom.jpg" alt="University Building" class="about-image">
+            <div class="about-text">
+                <h2>About Our Department</h2>
+                <p>he Department of Computer Engineering was set up under Zeal College of Engineering and Research in 2007. Our sole objective is and will always be to provide the learner with a repertoire of knowledge that will serve them for a lifetime. We have 13 well equipped labs with the latest software installed. The high speed internet facility (50 Mbps lease line) coupled with regular seminars and workshops held for the students and faculty ensures that the knowledge-gathering process is a holistic one. The IBM Software Lab for Emerging Technologies, set up in collaboration with IBM, is another initiative of the Department and we are making sincere efforts to ensure that every single student gets certified by this Lab. Additionally, the Zeal Firefox Club involves the students wherein they can engage in the development of Firefox products and applications. They are active volunteers in Nirmaan and Talentron, which are the technical and cultural festivals held at Zeal annually and which witness the active participation of the students.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty Section -->
+    <section class="faculty">
+        <h2>Our Dedicated Faculty</h2>
+        <div class="faculty-container">
+            <div class="faculty-item" onclick="openModal('aparnamoteModal')">
+                <img src="faculty/hod.jpg" alt="Prof. Aparna V. Mote">
+                <h3>Prof. Aparna V. Mote</h3>
+                <h5>Head of Department, M.E. (Computer Engineering)</h5>
+            </div>
+
+            <div class="faculty-item" onclick="openModal('maheshnavleModal')">
+                <img src="faculty/mn.jpg" alt="Dr. Mahesh Navale">
+                <h3>Dr. Mahesh Navale</h3>
+                <h5>Associate Professor</h5>
+            </div>
+
+            <div class="faculty-item" onclick="openModal('nrModal')">
+                <img src="faculty/nr.jpg" alt="Prof. Nitisha Rajgure">
+                <h3>Prof. Nitisha Rajgure</h3>
+                <h5>Associate Professor</h5>
+            </div>
+
+            <div class="faculty-item" onclick="openModal('rpModal')">
+                <img src="faculty/rakhip.jpg" alt="Prof. Rakhi S. Punwatkar">
+                <h3>Prof. Rakhi S. Punwatkar</h3>
+                <h5>Associate Professor</h5>
+            </div>
+
+            <div class="faculty-item" onclick="openModal('logeswaranModal')">
+                <img src="vistingprof.webp" alt="Prof. Dr. R. Logeswaran">
+                <h3>Prof. Dr. R. Logeswaran</h3>
+                <h5>Visiting Professor from Help University</h5>
+            </div>
+
+            <div class="faculty-item" onclick="openModal('rachelModal')">
+                <img src="rachelmaam.webp" alt="Ms. Rachel">
+                <h3>Ms. Rachel</h3>
+                <h5>Instructor</h5>
+            </div>
+
+            <div class="faculty-item" onclick="openModal('Ali')">
+                <img src="ali.webp" alt="Ali">
+                <h3>Ali</h3>
+                <h5>Attender</h5>
+            </div>
+        </div>
+    </section>
+
+    <div id="aparnamoteModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('aparnamoteModal')">&times;</span>
+            <img src="faculty/hod.jpg" alt="Prof. Aparna V. Mote" class="modal-image">
+            <h2>Prof. Aparna V. Mote</h2>
+            <p>Head of Department of Computer Engineering.</p>
+            <p>M.E. (Computer Engineering)</p>
+        </div>
+    </div>
+    
+    <div id="maheshnavleModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('maheshnavleModal')">&times;</span>
+            <img src="faculty/mn.jpg" alt="Dr. Mahesh Navale" class="modal-image">
+            <h2>Dr. Mahesh Navale</h2>
+            <p>Associate Professor</p>
+            <p>Ph.D</p>
+        </div>
+    </div>
+    
+    <div id="nrModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('nrModal')">&times;</span>
+            <img src="faculty/nr.jpg" alt="Prof. Nitisha Rajgure" class="modal-image">
+            <h2>Prof. Nitisha Rajgure</h2>
+            <p>Associate Professor</p>
+            <p>M.E. (Computer Science and Engineering)</p>
+        </div>
+    </div>
+    
+    <div id="rpModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('rpModal')">&times;</span>
+            <img src="faculty/rakhip.jpg" alt="Prof. Rakhi S. Punwatkar" class="modal-image">
+            <h2>Prof. Rakhi S. Punwatkar</h2>
+            <p>Associate Professor</p>
+            <p>M.E.</p>
+        </div>
+    </div>
+    
+    <div id="logeswaranModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('logeswaranModal')">&times;</span>
+            <img src="vistingprof.webp" alt="Prof. Dr. R. Logeswaran" class="modal-image">
+            <h2>Prof. Dr. R. Logeswaran</h2>
+            <p>Visiting Professor in CSE (Data Science).</p>
+            <p>BEng(Hons) Imperial College London,UK M.S & Ph.D from MMU Malaysia.</p>
+            <p>Dean at Help University</p>
+        </div>
+    </div>
+    
+    <div id="rachelModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('rachelModal')">&times;</span>
+            <img src="rachelmaam.webp" alt="Ms. Rachel" class="modal-image">
+            <h2>Ms. Rachel</h2>
+            <p>Instructor in CSE (Data Science).</p>
+            <p>B.E(M.Tech)</p>
+        </div>
+    </div>
+<br>
+<div <div class="card-container">
+    <section id="card1" class="card">
+      <img src="vision.jpg" alt="Card 1 Image" class="card-image" />
+      <div class="card__content">
+        <p class="card__title">Vision</p>
+        <p class="card__description">
+            To emerge as a department of repute in Computer Engineering through innovative teaching, research, social responsibility, and entrepreneurial skills, developing responsible IT professionals.
+        </p>
+      </div>
+    </section>
+  
+    <section id="card2" class="card">
+      <img src="mission.jpg" alt="Card 2 Image" class="card-image" />
+      <div class="card__content">
+        <p class="card__title">Mission</p>
+        <p class="card__description">
+            M1: To provide in depth technical education and hands-on experiences in Computer Engineering using modern tools and technologies.<br><br>
+            M2: To endeavor innovative research culture to fulfill the needs of industry and society.<br><br>
+            M3: To instil in students a deep sense of social responsibility.<br><br>
+            M4: To strengthen collaboration between industry and academia, fostering the development of entrepreneurial skills among the students.<br><br>
+        </p> 
+      </div>
+    </section>
+</div>
+<br>
+  
+
+    <!-- Overview Section -->
+    <section class="overview">
+        <h2>Glimpses Of Departement</h2>
+        <div class="overview-container">
+            <div class="overview-item">
+                <img src="freshers.webp" alt="guest1">
+                <div class="text-overlay">
+                    <p>Fresher's party 2023</p>
+                </div>
+            </div>
+            <div class="overview-item">
+                <img src="workshopcover.webp" alt="guest2">
+                <div class="text-overlay">
+                    <p>Dr Rajkumar Buyya visit to our Departement</p>
+                </div>
+            </div>
+            <div class="overview-item">
+                <img src="movements3.webp" alt="guest3">
+                <div class="text-overlay">
+                    <p>Department Visit To Bidar Fort For Heritage Walk</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+<section class="achievements">
+    <h2>Achievements</h2>
+    <div class="achievement-cards">
+        <div class="achievement-card">
+            <img src="icaimi.jpg" alt="Conference Achievement">
+            <h3>International Conference (2024)</h3>
+            <p>Successfully hosted the IEEE International Conference on AI, IoT, and Machine Learning.</p>
+        </div>
+        <div class="achievement-card">
+            <img src="movements2.webp" alt="Hackathon Winner">
+            <h3>2% scientist in the world</h3>
+            <p>Our HOD sir Recognized world's top 2% scientists by Stanford-Elsevier-2024.</p>
+        </div>
+        <div class="achievement-card">
+            <img src="movements1.webp" alt="Best Department Award">
+            <h3>Visiting professor</h3>
+            <p>Dr. R. Logeswaran is appointed as visiting professor in CSE(Data Science)</p>
+        </div>
+        <div class="achievement-card">
+            <img src="Mou.jpg" alt="Collaboration with NIT Silchar">
+            <h3>MOU Signing Between GNDECB & HELP University</h3>
+            <p>GNDECB and HELP University, Malaysia, signed an MoU to collaborate on AI, IoT, Machine Learning, and Image Processing research and education.</p>
+        </div>
+    </div>
+</section>
+
+
+    <section class="clubs-section">
+        <h2>Our Clubs</h2>
+        <div class="clubs-container">
+            <a href="clubs.html" class="club-item">
+                <img src="codingclub.webp" alt="Coding Club">
+                <h3>FireFox Club</h3>
+            </a>
+            <a href="clubs.html" class="club-item">
+                <img src="ieee.webp" alt="IEEE Club">
+                <h3>Android Club</h3>
+            </a>
+            <a href="clubs.html" class="club-item">
+                <img src="ieee.webp" alt="IEEE Club">
+                <h3>Third Club</h3>
+            </a>
+        </div>
+    </section>
+
+    <!-- Upcoming Events Section -->
+    <section class="events" id="events">
+        <h2>Upcoming Events</h2>
+        <div class="events-container">
+            <div class="event-item" style="background-image: url('event1bg.webp');">
+                <h3>Magazine Release 2024</h3>
+                <p>Date: October 26, 2024</p>
+                <p>Location: Mini Auditorium, GNDECB</p>
+            </div>
+            <div class="event-item" style="background-image: url('event2bg.webp');">
+                <h3>Proposed Hackathon 2024</h3>
+                <p>Date: November 28, 2024</p>
+                <p>Location: Guru Bhavan, GNDECB</p>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Contact Information Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>Contact Information</h3>
+            <p>Email: zcoer@zealeducation.com</p>
+            <p>Tel: +91 2067206000</p>
+            <p>Address: 3rd Floor, D-BLDG, Survey No.39, Zeal College of Engineering and Research, Narhe-Dhayari Road, Narhe, Pune-411041</p>
+            <p>Designed & Developed by <a class="developername1" href="https://www.linkedin.com/in/gauravrasane14/" target="_blank">Gaurav Rasane</a> of Computer Engg. Dept. ZCOER</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+    <script>
+        const menuIcon = document.getElementById('menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>

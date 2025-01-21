@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IEEE Club</title>
+    <link rel="stylesheet" href="ieee.css">
+</head>
+<body>
+    
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="gndlogo.webp" alt="University Logo">
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html">About Us</a></li>
+            <li><a href="gallery.html">Events Gallery</a></li>
+            <li><a href="studentcorner.html">Study Corner</a></li>
+            <li><a href="clubs.html">Clubs</a></li>
+        </ul>
+        <div class="menu-icon">
+            <span>&#9776;</span>
+        </div>
+    </nav>
+
+    <!-- Club Overview -->
+    <section class="club-overview">
+        <h2>IEEE Chapters & Club</h2>
+        <img src="aboutphoto.webp" alt="IEEE Club Group Photo" class="club-group-photo">
+        <p>The Department of CSE (Data Science) proudly hosts an active IEEE Computer Society Chapter, providing a platform for students and faculty to engage with the global computing community. Through this chapter, members have access to cutting-edge resources, professional development opportunities, and networking with experts in the field. The chapter regularly organizes workshops, seminars, and technical events, fostering a collaborative environment for innovation and research. This initiative aligns with the department’s mission to stay at the forefront of data science advancements and drive impactful research.</p>
+    </section>
+
+    <!-- Events Conducted -->
+    <section class="club-events">
+        <h2>Events Conducted by IEEE</h2>
+        <div class="event-item" data-title-photo="ai-ethics-seminar.jpg">
+            <h3>One-Day Seminar On Enhancing  Cybersecurity Awareness</h3>
+            <!-- <p>Date: September 20, 2024</p> -->
+            <p>The seminar on "Enhancing Cybersecurity Awareness" provided valuable insights and strategies to effectively mitigate evolving cyber threats.</p>
+        </div>
+
+        <div class="event-item" data-title-photo="hackathon-2024.jpg">
+            <h3>Exploring Data Science Careers</h3>
+            <p>Date: February 24, 2024</p>
+            <p>The IEEE Computer Society Chapter's seminar on February 24, 2024, with Dr. Mandeep Singh, offered valuable insights on career pathways, startups, GATE preparation, design thinking, and cybersecurity in data science.</p>
+        </div>
+
+        <div class="event-item" data-title-photo="robotics-workshop.jpg">
+            <h3>One Day Seminar on Quantum Information Technology</h3>
+            <!-- <p>Date: August 15, 2024</p> -->
+            <p>Dr. T. Srinivas, Professor at IISc Bangalore, visited the Department of CSE (Data Science), highlighting IEEE opportunities, collaborative research at IISc, and academic best practices, while unveiling a proposal for an IEEE International Conference at GNDECB in December 2024.</p>
+        </div>
+
+        <div class="event-item" data-title-photo="ai-ethics-seminar.jpg">
+            <h3>International Conference on Recent Trends in AI, IoT, Machine Learning, Image Processing, and their Applications (ICAIMI -2024) & Tech Innovations Showcase</h3>
+            <!-- <p>Date: September 20, 2024</p> -->
+            <p>A key highlight of ICAIMI 2024 was the signing of an MoU between GNDECB and HELP University, Malaysia. The partnership aims to foster academic collaboration, joint research initiatives, and student and faculty exchanges.</p>
+        </div>
+
+        <div class="event-item" data-title-photo="ai-ethics-seminar.jpg">
+            <h3>Expert Talk by Dr. Santosh Kumar on "Research Pathway for UG Students"</h3>
+            <p>Date: June 13, 2024</p>
+            <p>Dr. Santosh Kumar from NIT Silchar delivered an insightful talk on "Research Pathway for UG Students" at Guru Nanak Dev Engineering College, Bidar, emphasizing early research engagement, practical steps to start research, and essential technical and soft skills.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <h3>Contact Information</h3>
+            <p>Email: info@gndec.com</p>
+            <p>Address: Guru Nanak Dev Engineering College, Mailoor Road, Bidar, KA-585403</p>
+            <p>Designed & Developed by Ankit Patil & Nikhil Mulge</p>
+        </div>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+            <img id="modalImage" src="ieee.webp" alt="Event Image" class="modal-image">
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal -->
+    <script>
+        // Get the modal
+        const modal = document.getElementById("myModal");
+
+        // Get the <span> element that closes the modal
+        const span = document.getElementsByClassName("close")[0];
+
+        // Function to open modal with event details
+        function showModal(eventDetails, imageSrc) {
+            const modalContent = document.getElementById("modalContent");
+            const modalImage = document.getElementById("modalImage");
+            modalContent.innerHTML = eventDetails;
+            modalImage.src = imageSrc; // Set the image source
+            modal.style.display = "block";
+        }
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        
+        // Add click event listeners to each event card
+const eventItems = document.querySelectorAll('.event-item');
+eventItems.forEach(item => {
+    item.addEventListener('click', () => {
+        const details = item.innerHTML; // Remove the extra details part
+        const titlePhoto = item.getAttribute('data-title-photo'); // Get the title photo
+        showModal(details, titlePhoto);
+    });
+});
+
+    </script>
+</body>
+</html>
